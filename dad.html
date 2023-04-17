@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script defer src="./todo-app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let defArray = [                    //создадим список дел по умолчанию
+        {
+          id: 1,
+          name: 'Сходить за стройматериалами',
+          done: true
+        },
+        {
+          id: 2,
+          name: 'Поклеить с мамой обои',
+          done: true 
+        },
+        {
+          id: 3,
+          name: 'Провести электрику',
+          done: true
+        },
+        {
+          id: 4,
+          name: 'Посмотреть концерт Кобзона',
+          done: false
+        },
+      ]
+      createTodoApp(document.getElementById('todo-app'), 'Дела Папы', 'list-dad', defArray);
+    });
+  </script>
+</head>
+
+<body>
+  <!-- mb-5 нужен для расставления отступов (margin-bottom) -->
+  <div class="container mb-5">
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Мои дела</a>
+      <a class="nav-link" href="dad.html">Дела Папы</a>
+      <a class="nav-link" href="mom.html">Дела Мамы</a>
+    </nav> 
+  </div>
+  <div id="todo-app" class="container"></div>
+</body>
+
+</html>
